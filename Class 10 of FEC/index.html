@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background in CSS</title>
+
+    <style>
+
+        body {
+            background-size: 25%;
+            background-image: url("https://i.pinimg.com/564x/4c/c0/ca/4cc0ca47c2983e2a3ee6d517e17f4387.jpg");
+            background-repeat: no-repeat;
+            background-position: bottom 0px right 30px;
+            background-attachment: fixed;
+        }
+
+        p {
+            font-size:16px;
+            text-align: justify;
+        }
+
+        div {
+            height:200px;
+            width:500px;
+        }
+
+        .d1 {
+            background:linear-gradient(grey,black,white);
+        }
+
+        .d2 {
+            background:linear-gradient(to right,green,white,red);
+        }
+
+        .d3 {
+            background:linear-gradient(to bottom right,blue,orange,green);
+        }
+
+        .c1 {
+            background:radial-gradient(grey,black,white);
+        }
+        .c2 {
+            background:radial-gradient(circle,green,white,red);
+        }
+
+        .c3 {
+            background:radial-gradient(circle,blue 20%,orange 40%,green 30%);
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Background in CSS</h1>
+    <hr style="background-color: darkgrey; height:5px;">
+    <h3>Properties in this webpage:</h3>
+    <ul>
+        <li>backround-color</li>
+        <li>backround-image</li>
+        <li>backround-size</li>
+        <li>backround-repeat</li>
+        <li>backround-attachment</li>
+    </ul>
+    <h3>Dummy Paragraph:</h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nemo ea atque ipsa. Eos assumenda odio ducimus sunt consequatur debitis laudantium, ipsum omnis illum a aperiam tempora dignissimos itaque asperiores.
+        Magnam non unde deserunt illum repellat officiis nemo accusantium quaerat alias perspiciatis. Quos aperiam voluptas in, sapiente ut deserunt, distinctio quas itaque assumenda facere quae amet eveniet esse perspiciatis? Laboriosam.
+    </p>
+    <hr style="background-color: black; height:10px;"><br>
+    <h1>Background (Linear Gradient)</h1>
+    <hr style="background-color: darkgrey; height:5px;">
+    <div class="d1">
+        <h3>Linear Gradient 1</h3>
+    </div>
+    <div class="d2">
+        <h3>Linear Gradient 2</h3>
+    </div>
+    <div class="d3">
+        <h3>Linear Gradient 3</h3>
+    </div>
+    <hr style="background-color: black; height:10px;"><br>
+    <h1>Background (Radial Gradient)</h1>
+    <hr style="background-color: darkgrey; height:5px;">
+    <div class="c1">
+        <h3>Radial Gradient 1</h3>
+    </div>
+    <div class="c2">
+        <h3>Radial Gradient 2</h3>
+    </div>
+    <div class="c3">
+        <h3>Radial Gradient 3</h3>
+    </div>
+</body>
+</html>
