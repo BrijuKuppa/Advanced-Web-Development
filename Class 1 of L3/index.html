@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <script>
+        let add=(a,b)=>{
+            return a+b
+        }
+        let output=add(30,12343);
+        document.write(`<h2>${output}</h2><hr>`)
+
+
+        document.write(`<h1>Arrays</h1>`)
+        const fruits=["apple","orange","pomegranet"]
+        fruits.forEach((v,i,a)=>{
+            a[i]=v.toUpperCase()
+            document.write(`<h2>Value: ${v}</h2> <h2>Index: ${i}</h2> <h2>Array: ${JSON.stringify(a)}</h2>`)
+        })
+    </script>
+</body>
+</html>
