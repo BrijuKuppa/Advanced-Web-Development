@@ -1,6 +1,10 @@
 let addw=document.getElementById("add");
 let shoppinglist=document.getElementById("shopping-list");
-const todolist=[];
+let todolist=[];
+window.onload=()=>{
+  todolist=JSON.parse(localStorage.getItem("todo_list"))||[];
+  todolist.forEach(argument1=>add_tasks_todo(argument1));
+}
 
 function render_data(){
     let datas="";
@@ -15,6 +19,7 @@ function render_data(){
   document.getElementById("cart_counter").innerHTML=li_count;
   strike();
   delete_task();
+  localStorage.setItem("todo_list",JSON.stringify(todolist));
 }
 render_data()
 
