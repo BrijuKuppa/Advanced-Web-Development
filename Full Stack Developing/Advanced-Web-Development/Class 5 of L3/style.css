@@ -1,0 +1,91 @@
+header{
+    background-color: cadetblue;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+}
+
+.plus_btn{
+    border-radius: 30%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    font-size: 25px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.overlay{
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 99%;
+    opacity: 0.9;
+    border-radius: 10px;
+    display: none;
+}
+
+.popup-box{
+    background-color: cadetblue;
+    border-radius: 10px;
+    width: 400px;
+    position: absolute;
+    top: 20%;
+    right: 40%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+textarea,input{
+    width:90%;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+hr {
+    width: 70%;
+    border-radius: 10%;
+}
+
+.x{
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(245, 139, 0);
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    width: 25px
+}
+
+.a{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(245, 139, 0);
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.container{
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(245, 139, 0);
+    width: 400px;
+    min-height: 350px;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 35px;
+    margin-top: 10px;
+}

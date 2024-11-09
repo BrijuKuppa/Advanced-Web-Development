@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+</head>
+<body>
+    <div style="position: relative; width: 500px; left: 540px; top: 300px;">
+    <center>
+    <form action="/guess" method="post">
+    <h2>Welcome to Number Guessing!</h2>
+    <hr><h3>Guess a number, to see how close you are to a randomly chosen one.</h3><hr><br>
+    <input name="guess" type="number" placeholder="Enter your number here."> <button>Submit</button>
+    <h3>{{ message }}</h3>
+    <br><button><a href="/guess">Restart</a></button>
+    </center>
+    </form>
+    </div>
+</body>
+</html>

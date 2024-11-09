@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infyni</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header{
+    background-color: cadetblue;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+}
+
+.plus_btn{
+    border-radius: 30%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    font-size: 25px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.overlay{
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 99%;
+    opacity: 0.9;
+    border-radius: 10px;
+    display: none;
+}
+
+.popup-box{
+    background-color: cadetblue;
+    border-radius: 10px;
+    width: 400px;
+    position: absolute;
+    top: 20%;
+    right: 40%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+textarea,input{
+    width:90%;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+hr {
+    width: 70%;
+    border-radius: 10%;
+}
+
+.x{
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(245, 139, 0);
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    width: 25px
+}
+
+.a{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(245, 139, 0);
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.container{
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(245, 139, 0);
+    width: 400px;
+    min-height: 350px;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Infyni</h1>
+    </header><br>
+    <button type="button" class="plus_btn" onclick="toShow()">+</button>
+    <div class="overlay"></div>
+    <div class="popup-box">
+        <form>
+            <h2>Add Sticky Note</h2>
+            <input type="text" placeholder="Title" id="book"><br><hr>
+            <input type="date" placeholder="Date" id="author"><hr>
+            <textarea placeholder="Description" id="book-description" cols="30" rows="5"></textarea><br>
+            <button class="a" type="button" onclick="toAdd()">Add</button>
+            <button class="x" type="button" onclick="toHide()">X</button>
+        </form>
+    </div>
+
+
+
+    <section id="con_main">
+        <div class="container">
+            <h1 id="book-title">Title</h1><hr>
+            <h2 id="author">Date</h2>
+            <hr>
+            <p id="description">This is a dummy stick note. You can delete this.</p><hr><br><br>
+            <button type="submit" onclick="toDelete(event)" style="border-radius: 10px; border:none; background-color: cadetblue; color: white; padding: 5px">Delete</button>
+        </div>
+    </section>
+
+    <script>
+        let overlay=document.querySelector(".overlay");
+let popup=document.querySelector(".popup-box");
+let header=document.querySelector("header");
+let book=document.getElementById("book");
+let author=document.getElementById("author");
+let book_des=document.getElementById("book-description");
+let con_main=document.getElementById("con_main");
+
+function toShow(){
+    overlay.style.display="block";
+    popup.style.display="block";
+    header.style.display="none";
+}
+
+function toHide(){
+    overlay.style.display="none";
+    popup.style.display="none";
+    header.style.display="block";
+}
+
+function toDelete(event){
+    event.target.parentElement.remove();
+}
+
+function toAdd(){
+    let new_div=document.createElement("div");
+    new_div.setAttribute("class","container")
+    new_div.innerHTML=`
+    <h1 id="book-title">${book.value}</h1><hr>
+            <h2 id="author">${author.value}</h2>
+            <hr>
+            <p id="description">${book_des.value}</p><hr><br><br>
+            <button type="submit" onclick="toDelete(event)" style="border-radius: 10px; border:none; background-color: cadetblue; color: white; padding: 5px">Delete</button>
+    `;
+    con_main.appendChild(new_div)
+}
+    </script>
+</body>
+</html>

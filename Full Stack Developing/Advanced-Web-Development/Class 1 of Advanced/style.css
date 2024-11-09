@@ -1,0 +1,89 @@
+.h1 {
+    font-family: "Oleo Script", sans-serif;
+    text-shadow: 2px 2px 3px;
+    margin-left: 10px;
+    color:darkorange;
+}
+
+header {
+    position: fixed;
+    width: 99%;
+    top:0;
+    z-index: 1;
+}
+
+.nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cadetblue;
+}
+
+.ul1 {
+    display: flex;
+    gap:10px;
+    list-style-type: none;
+    margin-right: 10px;
+    font-family: Quicksand;
+}
+
+a:hover {
+    color:azure;
+    transition: 1s;
+}
+
+li:hover {
+    scale:1.1;
+    transition: 1s;
+}
+
+a {
+    color:darkorange;
+    text-decoration: none;
+}
+
+#sec1 {
+    position: relative;
+    top:70px;
+    background-color: darkorange;
+    height:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+
+#sec2 {
+    position: relative;
+    top:70px;
+    background-color: darkorange;
+    height:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+
+#sec3 {
+    position: relative;
+    top:70px;
+    background-color: darkorange;
+    height:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+
+h2 {
+    font-family: Quicksand;
+}
+
+footer {
+    position: relative;
+    top:70px;
+    background-color: cadetblue;
+    padding:9px;
+    text-align: center;
+    margin-top:10px;
+}

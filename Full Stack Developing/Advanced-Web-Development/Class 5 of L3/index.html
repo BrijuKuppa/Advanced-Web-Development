@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Stickies</h1>
+    </header><br>
+    <button type="button" class="plus_btn" onclick="toShow()">+</button>
+    <div class="overlay"></div>
+    <div class="popup-box">
+        <form>
+            <h2>Add Sticky Note</h2>
+            <input type="text" placeholder="Title" id="book"><br><hr>
+            <input type="date" placeholder="Date" id="author"><hr>
+            <textarea placeholder="Description" id="book-description" cols="30" rows="5"></textarea><br>
+            <button class="a" type="button" onclick="toAdd()">Add</button>
+            <button class="x" type="button" onclick="toHide()">X</button>
+        </form>
+    </div>
+
+
+
+    <section id="con_main">
+        <div class="container">
+            <h1 id="book-title">Title</h1><hr>
+            <h2 id="author">Date</h2>
+            <hr>
+            <p id="description">This is a dummy stick note. You can delete this.</p><hr><br><br>
+            <button type="submit" onclick="toDelete(event)" style="border-radius: 10px; border:none; background-color: cadetblue; color: white; padding: 5px">Delete</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

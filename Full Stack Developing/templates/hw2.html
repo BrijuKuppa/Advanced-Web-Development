@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+    {% for detail in details %}
+    <div style="border: 1px black solid; width: 200px;">
+        Title: {{detail['title']}}<br>
+        Author: {{detail['author']}}<br>
+        Image: <img src="{{detail['image']}}">
+    </div>
+
+    {% endfor %}
+</body>
+</html>
